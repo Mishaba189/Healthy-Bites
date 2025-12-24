@@ -1,261 +1,181 @@
+/* ---------- GLOBAL ---------- */
+* {
+    box-sizing: border-box;
+}
+
 body {
-        margin: 0;
-        padding: 0;
-        font-family: "Inter", sans-serif;
-        color: #222;
-    }
+    margin: 0;
+    font-family: "Inter", sans-serif;
     
-/*navigation */    
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* ---------- NAVIGATION ---------- */
 nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 25px 60px;
-        background: #fff;
-        border-bottom: 1px solid #eee;
-    }
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+}
 
 nav .logo {
-        font-weight: 600;
-        font-size: 18px;
-        font-family: Playfair Display;
-    }
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 600;
+}
 
 nav ul {
-        display: flex;
-        gap: 35px;
-        list-style: none;
-    }
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-nav ul a {
-        cursor: pointer;
-        font-size: 14px;
-        font-family: roboto;
-        text-decoration: none;
-        color: inherit;
-    }
+nav ul li a {
+    font-size: 14px;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
 
 /* hero section */
-.hero{
+
+.hero {
     text-align: center;
-} 
-.hero h1{
-    font-family: Playfair Display;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 60px;
-    letter-spacing: 0;
-    margin-top: 5%;
-    margin-bottom: 5px;
-    
+    padding: 60px 20px 40px;
 }
-.hero p{
-    padding-left: 5%;
-    padding-right: 5%;
-    margin: 1%;
-    font-family: roboto;
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+.hero p {
     font-size: 18px;
-    line-height: 28px;
-    font-weight: 400;
+    color: #555;
+    margin-bottom: 30px;
 }
-.search-box{
-        width: 60%;
-        max-width: 600px;
-        padding: 14px 18px;
-        border-radius: 10px;
-        border: 1px solid #ddd;
-        outline: none;
+
+.search-box {
+    width: 100%;
+    max-width: 520px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    outline: none;
 }
-/*section1 */
-.section1{
-   padding-left: 10%;
-   margin: 2%;
-   margin-top: 5%;
-   padding-right: 10%;
-   
+
+.search-box:focus {
+    border-color: #4CAF50;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+/* section1 */
+.section1 {
+  text-align: start;
+  padding: 0px 120px 60px;  
 }
 .section1 .sec-title{
-    font-family: Playfair Display;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 36px;
-    text-align: left;
-
-}
-.section1 span{
-    font-family: roboto;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: left;
-    
-}
-.section1 p{
-    font-family: roboto;
-    font-size: 14px;
-    line-height: 1;
-}
-.section1 h3{
-    font-family: Playfair Display;
+    font-family: "Playfair Display", serif;
     font-size: 24px;
-    line-height: 1;
-}
-.section1 .content{
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-.section1 .View{
-    text-align: center;
-    width: 80%;
-    display: block;
-    background-color:#4CAF50;
-    color: #fff;
-    padding: 10px 0;
-    border-radius: 10px;
-    margin: 15px auto 0;
-    cursor: pointer;     
-}
-.section1 img{
-    border-radius: 16px;
-    cursor: pointer;
+    margin-bottom: 1px;
 }
 
-/* section2 */
-.section2{
-    padding-left: 10%;
-    padding-right: 10%;
-    margin: 2%;
-}
-.section2 h2{
-    font-family: Playfair Display;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 36px;
-    text-align: left;
-}
-.section2 .chip-list{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
-}
-.section2 .chip{
-    text-align: center;
-    width: 150px;
-    display: block;
-    background-color:#c7f0c9;
-    color: black;
-    font-weight: bold;
-    padding: 8px 0;
-    border-radius: 16px;
-    margin: 15px auto 0;
-    cursor: pointer;
-}
-/* section3 */
-.section3{
-    padding-left: 10%;    
-    text-align: left;
-    padding-right: 10%;
-    margin: 2%;
-}
-.section3 h2{
-    font-family: Playfair Display;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 36px;
-    text-align: left;
-}
-.section3 .blog-posts{
-    display: flex;
-    gap: 20px;
-    padding: 0 5%;
-    flex-wrap: wrap;
-    
-}
-.section3 .post{
-    width: 205px;
-}
-.section3 h3{
-    font-family: Playfair Display;
-    font-size: 20px;
-}
-.section3 .read-more{
-    font-weight: bold;
-    cursor: pointer;
-}
-/* .newsletter */
-.newsletter {
-    padding-left: 10%;
-    padding-right: 5%;
-    text-align: left;
-    margin: 2%;
+/* ---------- RECIPE GRID ---------- */
+.recipe-cards {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
 }
 
-.newsletter h2 {
-    font-family: Playfair Display;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 36px;
+/* ---------- CARD ---------- */
+.card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.newsletter .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;  
-    gap: 20px;           
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
-.newsletter .content > div {
-    flex: 1;            
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
 }
 
-#message {
+/* ---------- RECIPE INFO ---------- */
+.recipe {
+    padding: 14px;
+}
+
+.recipe h2 {
+    font-size: 18px;
+    margin: 0 0 6px;
+}
+
+.recipe p {
     font-size: 14px;
-    font-family: Roboto;
+    color: #777;
+    margin: 0;
 }
 
-.tail {
-    display: flex;
-    gap: 15px;
-}
-
-#email {
-    flex: 1;              
-    padding: 10px;
+/* ---------- BUTTON ---------- */
+.view-btn {
+    margin: 0 14px 14px;
+    width: calc(100% - 28px);
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 12px;
     font-size: 14px;
-}
-
-#subscribe {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    border-radius: 10px;
+    font-weight: 500;
     cursor: pointer;
-    text-align: center;
-    white-space: nowrap;
-}
-/* footer */
-.footer{
-
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: #222;
-    color: #fff;
-    text-align: left;
-}
-.footer ul{
-    list-style: none;
-    padding-top: 3%;
-    line-height: 2;
-    cursor: pointer;
-}
-.footer #rights{
-    text-align: center;
-    font-size: 13px;
+    transition: background 0.2s ease;
 }
 
-    
-
-
-
+.view-btn:hover {
+    background: #43a047;
+}
 

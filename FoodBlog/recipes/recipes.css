@@ -1,114 +1,201 @@
+/* ---------- GLOBAL ---------- */
+* {
+    box-sizing: border-box;
+}
+
 body {
-        margin: 0;
-        padding: 0;
-        font-family: "Inter", sans-serif;
-        color: #222;
-    }
-/* navigation     */
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ---------- NAVIGATION ---------- */
 nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 25px 60px;
-        background: #fff;
-        border-bottom: 1px solid #eee;
-    }
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+}
 
 nav .logo {
-        font-weight: 600;
-        font-size: 18px;
-        font-family: Playfair Display;
-    }
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 600;
+}
 
 nav ul {
-        display: flex;
-        gap: 35px;
-        list-style: none;
-    }
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-nav ul a {
-        cursor: pointer;
-        font-size: 14px;
-        font-family: roboto;
-        text-decoration: none;
-        color: inherit;
-    }
+nav ul li a {
+    font-size: 14px;
+    color: #333;
+    transition: color 0.2s ease;
+}
 
-/* hero section     */
-.hero{
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* ---------- HERO ---------- */
+.hero {
     text-align: center;
-    margin: 2%;
+    padding: 60px 20px 40px;
 }
-.hero h1{
-    margin: 0;
-    padding-top: 5%;
-    padding-bottom: 1%;
-    font-family: Playfair Display;
-    font-weight: bold;
-    font-size: 45px;
-    line-height: 60px;
 
-
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 44px;
+    margin-bottom: 10px;
 }
-.hero p{
-    margin: 0;
-    padding-top: 1%;
-    padding-bottom: 5%;
-    font-family: roboto;
+
+.hero p {
     font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
 }
-.search-box{
-        width: 60%;
-        max-width: 600px;
-        padding: 14px 18px;
-        border-radius: 10px;
-        border: 1px solid #ddd;
-        outline: none;
+
+.search-box {
+    width: 100%;
+    max-width: 520px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    outline: none;
 }
-/* Filter tags */
-.tags-list{
-    margin: 3%;
-    padding-left: 10%;
-    padding-right: 10%;
+
+.search-box:focus {
+    border-color: #4CAF50;
+}
+
+/* ---------- FILTER TAGS ---------- */
+.tags-list {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px 30px;
     display: flex;
-    gap: 1%;
     flex-wrap: wrap;
-    text-align: center;
+    justify-content: center;
+    gap: 12px;
 }
-.tags-list .tag{
-    display: block;
-    text-align: center;
-    width: 130px;
-    background-color:#c7f0c9;
-    color: black;
+
+.tag {
+    background: #e8f5e9;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 14px;
     font-weight: 500;
-    padding: 8px;
-    border-radius: 16px;
-    margin: 1% auto;
     cursor: pointer;
-
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* recipe cards */
-.recipe-cards{
-    margin: 2%;
-    padding-left: 10%;
-    padding-right: 10%;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    gap: 5%;
-    
+.tag:hover {
+    background: #4CAF50;
+    color: #fff;
 }
-.recipe-cards span{
-    display: block;
-    width: 200px;
-    border: 0.5px solid rgb(177, 175, 175);
-    border-radius: 16px;
-    text-align: start;
 
-
+/* ---------- RECIPE GRID ---------- */
+.recipe-cards {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
 }
-.recipe-cards span img{
-    border-radius: 16px 16px 0px 0px;
+
+/* ---------- CARD ---------- */
+.card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* ---------- RECIPE INFO ---------- */
+.recipe {
+    padding: 14px;
+}
+
+.recipe h2 {
+    font-size: 18px;
+    margin: 0 0 6px;
+}
+
+.recipe p {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+/* ---------- BUTTON ---------- */
+.view-btn {
+    margin: 0 14px 14px;
+    width: calc(100% - 28px);
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.view-btn:hover {
+    background: #43a047;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    nav {
+        padding: 16px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .search-box {
+        width: 90%;
+    }
 }

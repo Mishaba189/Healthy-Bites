@@ -3,62 +3,68 @@
     <head>
         <meta charset="UTF-8">
         <title>Healthy Bites</title>
+        <!-- External CSS -->
         <link rel="stylesheet" href="./home.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,
-        wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&
-        family=Roboto:ital,wght@0,100..900;1,100..900&family=Science+Gothic:slnt,wght@-4,100..900&display=swap" rel="stylesheet">
+        <!-- Google font -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
     </head>
     <body>
 
 <!-- navigation       -->
         <nav>
-            <div class="logo">Healthy Bites </div>
-            <ul>
-                <a href="./home.html">Home</a>
-                <a href="../recipes/recipes.html">Recipes</a>
-                <a>Blog</a>
-                <a>Categories</a>
-                <a>About</a>
-             </ul>
-        </nav>
+        <div class="logo">Healthy Bites</div>
+        <ul>
+            <li><a href="../home/home.html">Home</a></li>
+            <li><a href="../recipes/recipes.html">Recipes</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
 <!-- hero section          -->
         <div class="hero">
             <h1>Eat Clean, Feel Amazing</h1>
-            <p>Simple, nourishing recipes made with fresh ingredients — 
+            <p>Simple, nourishing recipes made with fresh ingredients- 
             perfect for everyday wellness.</p>
-            <input class="search-box" placeholder="Search healthy recipes, Ingredients…">                 
+            <input class="search-box" type="text" placeholder="Search healthy recipes, Ingredients…">                 
         <div >
 <!-- section1   -->
         <div class="section1">
             <h2 class="sec-title">Featured Healthy Recipes</h2>
-            <div class="content">
-                <span>
-                    <img src="../assets/images/Quinoa & Veggie Power Bowl.png" height="200px" width="250px"  />               
-                    <h3>Quinoa & Veggie <br /> Power Bowl</h3>
-                    <p>Easy + 15 minutes</p>
-                    <div class="View">View Recipe</div>            
-                </span>
-                <span>
-                    <img src="../assets/images/Green Detox Smoothi.png" height="200px" width="250"  />
-                    <h3>Green Detox <br /> Smoothie</h3>                
-                    <p>Easy + 5 minutes</p>
-                    <div class="View">View Recipe</div>
-                </span>
-                <span>
-                    <img src="../assets/images/bakedsweet potato.png" height="200px" width="250" />
-                    <h3>Baked Sweet <br />  Potato Fries</h3>
-                    <p>Easy + 20 minutes</p>
-                    <div class="View">View Recipe</div>
-                </span>
-                <span>
-                    <img src="../assets/images/avacado chickpea salad.png" height="200px" width="250px" />
-                    <h3>Avocado Chickpea<br />  Salad</h3>
-                    <p>Easy + 10 minutes</p> 
-                    <div class="View">View Recipe</div> 
-                </span>  
+            <div class="recipe-cards">
+                <div class="card">
+                    <img src="../assets/images/healthy oatmeal bowl.png" alt="Healthy Oatmeal Bowl">
+                    <div class="recipe">
+                        <h2>Healthy Oatmeal Bowl</h2>
+                        <p>Easy · 5 minutes</p>
+                     </div>
+                    <button class="view-btn">View Recipe</button>
+                </div>
+
+                <div class="card">
+                    <img src="../assets/images/Green Detox Smoothi.png" alt="Green Detox Smoothie">
+                    <div class="recipe">
+                        <h2>Green Detox Smoothie</h2>
+                        <p>Easy · 5 minutes</p>
+                    </div>
+                    <button class="view-btn">View Recipe</button>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/mango chia smoothie.png" alt="Mango Chia Smoothie">
+                    <div class="recipe">
+                        <h2>Mango Chia Smoothie</h2>
+                        <p>Easy + 20 minutes</p>
+                    </div>
+                    <button class="view-btn">View Recipe</button>
+                </div><div class="card">
+                    <img src="../assets/images/vegan tofu stir-fry.png" alt="Vegan Tofu Stir-Fry">
+                    <div class="recipe">
+                        <h2>Vegan Tofu Stir-Fry</h2>
+                        <p>Easy + 15 minutes</p>
+                    </div>
+                    <button class="view-btn">View Recipe</button>
+                </div>
             </div>   
         </div>
 <!-- section2          -->
@@ -95,11 +101,6 @@
                 <div class="post">
                     <h3>5 Simple Meal Prep Ideas for Busy Weeks</h3>
                     <p>Quick, nutritious meal prep ideas that save time, reduce stress, and keep you eating healthy all week.</p>
-                    <div class="read-more">Read More</div>
-                </div>
-                <div class="post">
-                    <h3>The Ultimate Guide to Healthy Smoothies</h3>
-                    <p>Discover the perfect blends, healthy add-ins, and secret tips to make delicious, nutrient-packed smoothies.</p>
                     <div class="read-more">Read More</div>
                 </div>
             </div>        
