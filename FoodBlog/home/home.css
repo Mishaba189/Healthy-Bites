@@ -55,6 +55,12 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 60px 20px 40px;
+    background-image: url("../assets/images/image.png");
+  background-size: cover;            
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 20%;
 }
 
 .hero h1 {
