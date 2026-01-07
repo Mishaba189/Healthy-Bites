@@ -1,0 +1,340 @@
+/* ---------- GLOBAL ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;    
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h2{
+     font-family: "Playfair Display", serif;
+     font-size: 22px;
+     margin: 0;
+    margin-bottom: 20px;
+}
+ul, ol {
+    padding-left: 0;
+    margin: 16px 0 32px;
+}
+/* ---------- NAVIGATION ---------- */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+nav .logo {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    font-size: 14px;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+
+
+/* hero section */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+.hero img {
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Split screens */
+
+.split{
+    display: flex;
+    flex-direction: Row;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 50px;
+}
+.split .right{
+    flex: 1;
+    margin: 10px;
+}
+.split .left{
+    flex: 1;
+    margin:10px;
+}
+
+/* Ingredients */
+.ing h2{
+    margin: 0;
+    margin-bottom: 20px;
+}
+.left ol {
+    list-style: none;
+    counter-reset: step;
+}
+
+.left ol li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 36px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.left ol li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background: #2222221f;
+    color: #000000;
+    border-radius: 50%;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* INSTRUCTIONS SECTION */
+.left ul {
+    list-style: none;
+}
+
+.left ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.left ul li::before {
+    content: "🟢";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+}
+
+
+
+ /* RECIPE META INFO */
+
+.info-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background: #f8f8f6;
+    padding: 20px;
+    border-radius: 16px;
+    max-width: 600px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.icon {
+    font-size: 14px;
+    color: #333;
+}
+
+.label {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.value {
+    font-size: 12px;
+    font-weight: 600;
+    color: #222;
+    margin: 4px 0 0;
+}
+
+/* NUTRITION INFORMATION */
+.nutrition h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f8f8f6;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.nutrition-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+.nutrition-table td:first-child {
+    border-right: 1px solid #ddd;
+    font-weight: 500;
+    color: #555;
+}
+
+.nutrition-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* CHEF’S TIPS */
+.tips h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tips .tip-card {
+    background: #f8f8f6;
+    padding: 20px;
+    border-radius: 14px;
+    margin-top: 20px;
+    list-style: none;
+}
+
+.tips .tip-card ul {
+    list-style: none;
+    margin: 12px 0 0;
+}
+
+.tips .tip-card li {
+    padding-left: 26px;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.tips .tip-card li::before {
+    content: "💡";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* footer */
+
+.related-section {
+  text-align: center; /* center title */
+  margin: 40px 0;     /* spacing above and below */
+}
+
+.related-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.related-cards {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  gap: 20px;               
+  flex-wrap: wrap;         
+}
+
+.related-cards .card {
+  width: 400px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.08);
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-content img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-text h3 {
+  font-size: 16px;
+  margin: 0 0 6px 0;
+}
+
+.card-text p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 10px 0;
+}
+
+.card-text button {
+  background: #dff3e5;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  align-self: center; /* center button horizontally */
+  margin-top: 5px;   
+}
