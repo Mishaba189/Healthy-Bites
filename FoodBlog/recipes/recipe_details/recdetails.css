@@ -272,9 +272,12 @@ nav ul li a:hover {
 /* footer */
 
 .related-section {
-  text-align: center; /* center title */
-  margin: 40px 0;     /* spacing above and below */
-}
+  text-align: center; 
+  background-color: #f6fbf7;
+  padding: 40px 20px;
+  text-align: center;
+}     
+
 
 .related-section h2 {
   font-size: 24px;

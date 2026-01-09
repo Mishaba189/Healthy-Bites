@@ -63,7 +63,7 @@ nav ul li a:hover {
 /* Hero section */
 .hero-section {
   background-image: url("../../assets/images/image1.png");
-  background-size: cover;            /* Responsive */
+  background-size: cover;            
   background-position: center;
   background-repeat: no-repeat;
 
@@ -122,6 +122,8 @@ nav ul li a:hover {
     padding-left:10%;
     padding-right: 10%;
     border-top: 1px solid #eee;
+    min-height: 250px;
+    border-bottom: 1px solid #eee;
 }
 
 .section h3 {
@@ -161,11 +163,13 @@ nav ul li a:hover {
 /* ---------- SECTION IMAGE ---------- */
 
 .section img {
-    width: 100%;
-    max-width: 200px;
+    width: 50%;
+    max-width: 300px;
+    max-height: 200px;
     justify-self: center;
     border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    cursor: pointer;
 }
 
 /* ---------- IMAGE CAPTION ---------- */
@@ -177,6 +181,109 @@ nav ul li a:hover {
     text-align: center;
     font-style: italic;
 }
+
+/*------------ FINAL TIP------------ */
+.tip{
+    padding-left:10%;
+    padding-right: 10%;
+    max-width: 900px;
+    
+    
+
+
+}
+
+.tip h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: #2f3e35;
+    
+}
+
+.tip p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: #555;
+}
+
+/*----------------- FOOTER----------------- */
+
+.related-section {
+  text-align: center; 
+  text-align: center;
+  background-color: #f6fbf7;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.related-section h2 {
+ font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.related-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+.related-cards .card {
+  width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.card-content h2 {
+  margin-bottom: 12px;
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+
+.card-content p {
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #555;
+}
+
+
+.read-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #4CAF50;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.read-btn:hover {
+  color: #388e3c;
+}
+
 
 /* ---------- RESPONSIVE ---------- */
 
@@ -198,3 +305,4 @@ nav ul li a:hover {
         font-size: 34px;
     }
 }
+
